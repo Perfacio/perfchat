@@ -1,0 +1,513 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+body{
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+header{
+    max-width: 1200px;
+    margin: 1rem auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header > div.logo{
+    height: 60px;
+    display: flex;
+    align-items: center;
+}
+header > div.logo > img{
+    height: 100%;
+    width: auto;
+    margin-right: 15px;
+}
+header > div.logo > span{
+    color: blue;
+    font-size: 3rem;
+}
+header > div.logo > span:last-child{
+    color: pink;
+    margin-left: 10px;
+}
+header > nav > a{
+    text-transform: uppercase;
+    text-decoration: none;
+    color: black;
+    margin-left: 1rem;
+}
+header > nav > a:hover{
+    color: blue;
+}
+header > div.menu-mobile,
+header > div.menu-mobile-v2{
+    display: none;
+}
+header > div.menu-mobile-v2:after,
+header > div.menu-mobile-v2:before{
+    content: '';
+    transition: transform .3s;
+    transform: rotate(0deg);
+    /* transform-origin: center; */
+}
+header > div.menu-mobile-v2 > div{
+    height: 4px;
+    transition: height .1s;
+    transition-delay: .25s;
+}
+header > div.menu-mobile > span,
+header > div.menu-mobile-v2 > div,
+header > div.menu-mobile-v2:after,
+header > div.menu-mobile-v2:before{
+    width: 30px;
+    border-radius: 5px;
+    background-color: black;
+    display: block;
+}
+header > div.menu-mobile > span,
+header > div.menu-mobile-v2:after,
+header > div.menu-mobile-v2:before{
+    height: 4px;
+}
+header > div.menu-mobile > span:not(:last-child),
+header > div.menu-mobile-v2 > div,
+header > div.menu-mobile-v2:before{
+    margin-bottom: 5px;
+}
+header > div.menu-mobile-v2.visible > div{
+    height: 0;
+    margin: 0;
+}
+header > div.menu-mobile-v2.visible:before{
+    transform: rotate(45deg);
+    transform-origin: center;
+    /* width: 24px; */
+    margin: 0;
+    transition: transform .3s;
+}
+header > div.menu-mobile-v2.visible:after{
+    transform: rotate(-45deg);
+    transform-origin: center;
+    /* width: 24px; */
+    margin: -4px 0 0;
+    transition: transform .3s;
+}
+main > section.slider{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main > section.slider > img{
+    width: 100%;
+    height: auto;
+}
+main > section.slider > div.shadow{
+    background-color: rgba(0,0,0,.6);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+main > section.slider > div.text{
+    position: absolute;
+    color: white;
+    text-align: center;
+}
+main > section.slider > div.text > h2{
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-weight: normal;
+    margin: 0;
+}
+main > section.slider > div.text > h3{
+    margin: 0;
+}
+main > section.slider > div.text > button{
+    border: 1px solid white;
+    background: none;
+    color: white;
+    border-radius: 0;
+    margin-top: 3rem;
+    padding: 10px 30px;
+    text-transform: uppercase;
+    cursor: pointer;
+    outline: none;
+}
+main > section.slider > div.arrow{
+    width: 50px;
+    height: 50px;
+    border: 1px solid white;
+    position: absolute;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+main > section.slider > div.arrow:hover{
+    cursor: pointer;
+    background-color: grey;
+}
+main > section.slider > div.arrow:after{
+    content: '';
+    border-width: 3px 3px 0 0;
+    border-color: white;
+    border-style: solid;
+    width: 12.5px;
+    height: 12.5px;
+    position: absolute;
+}
+main > section.slider > div.arrow.left:after{
+    transform: rotate(-135deg);
+    margin-left: 4px;
+}
+main > section.slider > div.arrow.right:after{
+    transform: rotate(45deg);
+    margin-left: -4px;
+}
+main > section.slider > div.arrow.left{
+    left: 25px;
+}
+main > section.slider > div.arrow.right{
+    right: 25px;
+}
+main > section.info {
+    background-color: rgb(0,0,0,.03);
+    padding: 2rem 0;
+}
+main > section.info > div.wrapper{
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+main > section.info > div.wrapper > article{
+    width: calc(100% / 3);
+    padding: 15px;
+    text-align: center;
+    box-sizing: border-box;
+}
+main > section.info > div.wrapper > article > img{
+    width: 70px;
+    height: auto;
+}
+main > section.info > div.wrapper > article > h4{
+    margin: 10px 0;
+    color: blue;
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    font-weight: normal;
+}
+main > section.info > div.wrapper > article > span{
+    line-height: 1.5;
+    color: rgba(0, 0, 0, .8);
+    font-size: .9rem;
+}
+main > section.call{
+    background-color: blue;
+    color: white;
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    padding: 2rem 0;
+}
+main > section.call > div.wrapper{
+    max-width: 1200px;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+}
+main > section.call > div.wrapper > button{
+    font-size: inherit;
+    background: none;
+    border: 1px solid white;
+    border-radius: 0;
+    color: inherit;
+    padding: 10px 30px;
+    text-transform: inherit;
+}
+main > section.portfolio{
+    max-width: 1200px;
+    margin: 2rem auto;
+}
+main > section.portfolio > h3{
+    color: blue;
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    margin: 0;
+}
+main > section.portfolio > h3:after{
+    content: '';
+    width: 70px;
+    height: 2px;
+    background-color: pink;
+    display: block;
+    margin-top: 7px;
+}
+main > section.portfolio > div{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+}
+main > section.portfolio > div > img{
+    border: 2px solid pink;
+    width: 30%;
+    height: auto;
+}
+main > section.stat{
+    background-color: blue;
+    padding: 2rem 0;
+}
+main > section.stat > div.wrapper{
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+main > section.stat > div.wrapper > article{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+main > section.stat > div.wrapper > article > span{
+    color: white;
+    text-transform: uppercase;
+}
+main > section.stat > div.wrapper > article > span:first-child{
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+main > section.stat > div.wrapper > article > span:first-child:after{
+    content: '';
+    width: 30px;
+    height: 2px;
+    background-color: white;
+    display: block;
+    margin: .6rem auto;
+}
+main > section.stat > div.wrapper > article > span:last-child{
+    font-size: 1.5rem;
+}
+main > section.news{
+    max-width: 1200px;
+    margin: 2rem auto;
+}
+main > section.news > h3{
+    color: blue;
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    margin: 0;
+}
+main > section.news > h3:after{
+    content: '';
+    width: 70px;
+    height: 2px;
+    background-color: pink;
+    display: block;
+    margin-top: 7px;
+}
+main > section.news > div{
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+main > section.news > div > article{
+    background-color: rgba(0,0,0,.03);
+    width: 48%;
+    display: flex;
+    min-width: 456px;
+}
+main > section.news > div > article > img{
+    width: 40%;
+    height: auto;
+}
+main > section.news > div > article > div{
+    display: flex;
+    flex-direction: column;
+    margin: 2rem 15px 1rem;
+}
+main > section.news > div > article > div > span{
+    font-size: .9rem;
+    color: grey;
+    line-height: 1.5;
+}
+main > section.news > div > article > div > span:first-child{
+    font-style: italic;
+}
+main > section.news > div > article > div > a{
+    margin: auto 0 0 auto;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: blue;
+}
+main > section.form{
+    background-color: rgba(0,0,0,.03);
+    padding: 2rem 0;
+}
+main > section.form > form{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+main > section.form > form > h3{
+    color: blue;
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    margin: 0;
+    margin-bottom: 2rem;
+}
+main > section.form > form > h3:after{
+    content: '';
+    width: 70px;
+    height: 2px;
+    background-color: pink;
+    display: block;
+    margin-top: 7px;
+}
+main > section.form > form > div.row{
+    display: flex;
+    justify-content: space-between;
+}
+main > section.form > form > div.row > div.col{
+    width: 48%;
+    display: flex;
+    flex-direction: column;
+}
+main > section.form > form > div.row > div.col > input,
+main > section.form > form > div.row > div.col > textarea{
+    border: 2px solid blue;
+    font-size: 1.1rem;
+    padding: 5px;
+}
+main > section.form > form > div.row > div.col > input{
+    margin-bottom: 10px;
+}
+main > section.form > form > div.row > div.col > button{
+    border: none;
+    background-color: blue;
+    padding: 10px 0;
+    color: white;
+    font-size: 1.1rem;
+}
+main > section.form > form > div.row > div.col > textarea{
+    height: calc(100% - 10px);
+    box-sizing: border-box;
+    resize: none;
+    min-height: 5rem;
+}
+footer > section{
+    background-color: rgba(0,0,0,.8);
+    padding: 2rem;
+}
+footer > section > div.wrapper{
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+footer > section > div.wrapper > article{
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+}
+footer > section > div.wrapper > article > h3{
+    color: blue;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+}
+footer > section > div.wrapper > article > span{
+    color: white;
+    line-height: 1.5;
+    font-size: .9rem;
+}
+footer > section > div.wrapper > article > span > img{
+    width: 15px;
+    height: auto;
+}
+footer > section > div.wrapper > article > span > address{
+    display: inline;
+    font-style: normal;
+}
+footer > section > div.wrapper > article > span > a{
+    text-decoration: none;
+    color: inherit;
+}
+footer > div{
+    background-color: black;
+    color: white;
+    padding: 2rem 0;
+    text-align: center;
+    font-size: .9rem;
+}
+
+@media (max-width: 1200px){
+    header,
+    main > section:not(.slider){
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
+@media (max-width: 912px){
+    html, body{
+        font-size: 14px;
+    }
+    main > section.news > div > article{
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+    main > section.info > div.wrapper > article {
+        width: 50%;
+    }
+}
+
+@media (max-width: 768px){
+    header{
+        position: relative;
+    }
+    header > nav{
+        display: none;
+        background-color: rgba(0, 0, 0, .6);
+        /* display: flex; */
+        flex-direction: column;
+        padding: 1.5rem;
+        position: absolute;
+        right: calc(2rem + 2px);
+        z-index: 2;
+        top: calc(50% - 13px);
+    }
+    header > nav > a{
+        color: white;
+        margin-bottom: 10px;
+    }
+    header > div.menu-mobile,
+    header > div.menu-mobile-v2{
+        display: block;
+        z-index: 3;
+    }
+    header > div.menu-mobile.open{
+        height: 30px;
+        padding-top: 30px;
+    }
+}
+
+@media (max-width: 771px){
+    main > section.stat > div.wrapper > article > span:first-child{
+        font-size: 2.3rem;
+    }
+    main > section.stat > div.wrapper > article > span:last-child{
+        font-size: 1.3rem;
+        text-align: center;
+    }
+    main > section.form > form > div.row{
+        flex-wrap: wrap;
+    }
+    main > section.form > form > div.row > div.col{
+        width: 100%;
+    }
+    main > section.form > form > div.row > div.col > textarea{
+        margin-bottom: 10px;
+    }
+}
